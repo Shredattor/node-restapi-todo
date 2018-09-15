@@ -16,7 +16,7 @@ module.exports.getById = function(req, res){
     Todo.findById(req.params.id, function(err, todo){
         if(err){
             console.log(err.message);
-            res.send('An error ocurred when searching "todo" with id: ' + req.params.id.value);
+            res.send('An error ocurred when searching "todo" with id: ' + req.params.id);
         }else{
             console.log(todo);
             res.json(todo);
